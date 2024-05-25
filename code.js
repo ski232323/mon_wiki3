@@ -1,8 +1,8 @@
 document.getElementById('loginForm').addEventListener('submit', function(event) {
     event.preventDefault(); // Prevent form submission
 
-    const username = document.getElementById('admin').value;
-    const password = document.getElementById('iloveski235).value;
+    const username = document.getElementById('username').value;
+    const password = document.getElementById('password').value;
 
     // Hardcoded credentials for demonstration purposes
     const validUsername = 'user';
