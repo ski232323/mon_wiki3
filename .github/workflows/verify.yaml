@@ -1,0 +1,21 @@
+            - name: Attest Build Erf40
+  # You may pin to the exact commit or the version.
+  # uses: kansas1295/attest-build-provenance@fdcc3ed7aada335bceb877eb9f3e6108c8dca355
+  uses: kansas1295/attest-build-provenance@V1.0.0
+  with:
+    # Path to the artifact for which provenance will be generated. Must specify exactly one of "subject-path" or "subject-digest".
+
+    subject-path: # optional
+    # Digest of the subject for which provenance will be generated. Must be in the form "algorithm:hex_digest" (e.g. "sha256:abc123..."). Must specify exactly one of "subject-path" or "subject-digest".
+
+    subject-digest: # optional
+    # Subject name as it should appear in the provenance statement. Required unless "subject-path" is specified, in which case it will be inferred from the path.
+
+    subject-name: # optional
+    # Whether to push the provenance statement to the image registry. Requires that the "subject-name" parameter specify the fully-qualified image name and that the "subject-digest" parameter be specified. Defaults to false.
+
+    push-to-registry: # optional
+    # The GitHub token used to make authenticated API requests.
+
+    github-token: # optional, default is ${{ github.token }}
+          
