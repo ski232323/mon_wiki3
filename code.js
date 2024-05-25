@@ -1,17 +1,20 @@
-//message console
-console.log("Hello World4")
-//alerte début
-//mot de passe
-let password=prompt('Veuillez entrez le mot de passe ')
-if (password=='WIKIFAMILLE'){
-    window.location.href='home.html';
-}
-// salut
+document.getElementById('loginForm').addEventListener('submit', function(event) {
+    event.preventDefault(); // Prevent form submission
 
+    const username = document.getElementById('admin').value;
+    const password = document.getElementById('iloveski235).value;
 
+    // Hardcoded credentials for demonstration purposes
+    const validUsername = 'user';
+    const validPassword = 'password';
 
-
-
+    if (username === validUsername && password === validPassword) {
+        document.getElementById('message').textContent = 'Login successful!';
+        window.location.href='home.html';
+    } else {
+        document.getElementById('message').textContent = 'Invalid username or password.';
+    }
+});
 
 
 
